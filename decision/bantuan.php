@@ -2,23 +2,23 @@
 
 echo "<h2>Guideline to the system</h2>";
 echo "Still under construction.";
-/*	
+	
 echo "
-	1. Menu Admin > Data Karyawan , digunakan untuk menambah data-data pribadi dan akun karyawan
+	1. Admin Menu > Employee Data , used to add/edit/delete employee data
 	<br>
-	2. Menu Admin > Kriteria Penilaian , digunakan untuk menambah,update dan hapus kriteria penilaian
+	2. Admin Menu > Assessment Criteria , used to add/edit/delete assessment criteria
 	<br>
-	3. Menu Admin > Bobot Kriteria, digunakan untuk menghitung bobot penilaian masing-masing kriteria
+	3. Admin Menu > Weight of Criteria, used to count the weight of each criteria
 	<br>
-	4. Menu Admin > Skor Penilaian, digunakan untuk menghitung total nilai penilaian masing-masing karyawan
+	4. Admin Menu > Assessment Scores, used to count the total scores of each employees assessment score
 	<br>
-	5. Menu Admin dan User > Laporan Evaluasi Kinerja, digunakan untuk menampilkan hasil perankingan karyawan
+	5. Admin & User Menu > Evaluation Report, used to display the ranking result
 	<br>
-	6. Menu Admin dan User > Bantuan, digunakan untuk melihat petunjuk penggunaan navigasi website
+	6. Admin & User Menu > Help, used to explain the system navigation
 	<br>
-	7. Menu Admin dan User > Tentang SPK, digunakan untuk melihat deskripsi SPK dan referensinya 
+	7. Menu Admin dan User > About DSS, used to explain what the system is 
 	<br>
-	8. Menu User > Profil, digunakan oleh user untuk update data pribadi atau akun SPK 
+	8. Menu User > User Profile, used by user to update their personal data 
 ";
-*/
+
 ?>
