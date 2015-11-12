@@ -5,7 +5,7 @@ include "../../config/koneksi.php";
 $modul=$_GET[modul];
 $act=$_GET[act];
 
-// Hapus Karyawan
+// Delete Employee
 if ($modul=='dtakary' AND $act=='hapus'){
   mysql_query("DELETE FROM karyawan WHERE nip='$_GET[id]'");
   mysql_query("DELETE FROM pengguna WHERE nip='$_GET[id]'");
@@ -14,7 +14,7 @@ if ($modul=='dtakary' AND $act=='hapus'){
   header('location:../../indexs.php?modul='.$modul);
 }
 
-// Input Karyawan
+// Input Employee
 elseif ($modul=='dtakary' AND $act=='input'){
   $pass=md5($_POST[password]);
   mysql_query("INSERT INTO karyawan(
@@ -42,7 +42,7 @@ elseif ($modul=='dtakary' AND $act=='input'){
   header('location:../../indexs.php?modul='.$modul);
 }
 
-// Update Karyawan
+// Update Employee
 elseif ($modul=='dtakary' AND $act=='update'){
   if (empty($_POST[password])) {
     mysql_query("UPDATE karyawan SET 
@@ -53,7 +53,7 @@ elseif ($modul=='dtakary' AND $act=='update'){
                                   telp         = '$_POST[telp]'  
                            WHERE  nip       = '$_POST[id]'");
   }
-  // Apabila password diubah
+  // If the password has been changed
   else{
     $pass=md5($_POST[password]);
 	mysql_query("UPDATE karyawan SET nip       = '$_POST[nip]',
