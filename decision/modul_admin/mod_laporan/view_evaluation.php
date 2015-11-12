@@ -21,7 +21,7 @@ if ($hasil){
 		} else { 
 			$page = $_GET['hal']; 
 		}
-		$jmlperhalaman = 10;  // jumlah record per halaman
+		$jmlperhalaman = 10;  // sum of record per page
 		$offset = (($page * $jmlperhalaman) - $jmlperhalaman);
 		$tampil=mysql_query("SELECT h.nip,k.nama_karyawan,k.jabatan,k.divisi,h.total_nilai
 				 FROM karyawan k, previous_calculation h
@@ -40,7 +40,7 @@ if ($hasil){
 		}
 	 echo "</table>";
 	 
-	// membuat nomor halaman
+	// create page number
 	$total_record = mysql_result(mysql_query("SELECT COUNT(*) as Num FROM previous_calculation where eval_code='$eval_name'"),0);
 	$total_halaman = ceil($total_record / $jmlperhalaman);
 	echo "<center>Page :<br/>"; 
