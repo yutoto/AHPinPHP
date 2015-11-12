@@ -1,7 +1,7 @@
 <?php
 
 /*
-KONFIGURASI SPK EVALUASI KINERJA KARYAWAN
+Configuration of DSS for Employee Assessessment of DG Treasury
 */
 
 $title = "DSS for Employee Assessment";
