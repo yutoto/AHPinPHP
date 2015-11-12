@@ -1,7 +1,7 @@
 <?php
 session_start();
 ini_set('display_errors', 1); ini_set('error_reporting', E_ERROR);
-/* Klo browser otomatis mau menuju ke menu tanpa melakukan proses login */
+/* IF the browser try to straight into menu without login process */
 if (empty($_SESSION[username]) AND empty($_SESSION[passuser])){
   echo "<link href='main.css' rel='stylesheet' type='text/css'> 
  <center>To be able to access the modules, You should log in first <br>";
