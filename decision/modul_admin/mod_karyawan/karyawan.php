@@ -1,7 +1,7 @@
 <?php
 $aksi="modul_admin/mod_karyawan/aksi_karyawan.php";
 switch($_GET[act]){
-  // Tampil Karyawan
+  // Display Employee
   default:
     echo "<h2>Employee Data Management</h2>
           <input type=button class='btn btn-success' value='Add Employee' onclick=\"window.location.href='?modul=dtakary&act=tambah';\">
