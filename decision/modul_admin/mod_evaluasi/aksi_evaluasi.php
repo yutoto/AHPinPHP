@@ -6,7 +6,7 @@ $modul=$_GET[modul];
 $acts=$_GET[acts];
 $jlhkriteria=$_POST[jlhkriteria];
 $id=$_POST[nip];
-// Input nilai
+// Input Score
 if ($modul=='evaluasi' AND $acts=='input'){
   for($i=1;$i<=$jlhkriteria;$i++){
   	$nilai = $_POST['nilai'.$i];
@@ -14,7 +14,7 @@ if ($modul=='evaluasi' AND $acts=='input'){
   	mysql_query("INSERT INTO evaluasi(nip, id_kriteria, nilai) VALUES('$_POST[nip]', '$id_kriteria', '$nilai')");
   }
   
-  //Total Nilai
+  //Total Score
   $total=0;
   for($i=1;$i<=$jlhkriteria;$i++){
   	$nilai = $_POST['nilai'.$i];
@@ -31,7 +31,7 @@ if ($modul=='evaluasi' AND $acts=='input'){
   
 }
 
-// Update nilai
+// Update Score
 elseif ($modul=='evaluasi' AND $acts=='update'){
   for($i=1;$i<=$jlhkriteria;$i++){
   	$nilai = $_POST['nilai'.$i];
@@ -40,7 +40,7 @@ elseif ($modul=='evaluasi' AND $acts=='update'){
 	
   }
   
-  //Total Nilai
+  //Total Score
   $total=0;
   for($i=1;$i<=$jlhkriteria;$i++){
   	$nilai = $_POST['nilai'.$i];
