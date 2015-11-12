@@ -1,7 +1,7 @@
 <?php
 $aksi="modul_admin/mod_evaluasi/aksi_evaluasi.php";
 switch($_GET[acts]){
-  // Tampil Karyawan
+  // Display Employee
   default:
   $queri=mysql_query("SELECT * FROM konsistensi");
 	$cr=mysql_num_rows($queri);
@@ -31,7 +31,7 @@ switch($_GET[acts]){
              </td></tr>";
     }
     echo "</table>";
-	// membuat nomor halaman
+	// create the page number
 	$total_record = mysql_result(mysql_query("SELECT COUNT(*) as Num FROM karyawan"),0);
 	$total_halaman = ceil($total_record / $jmlperhalaman);
 	echo "<center>Page :<br/>"; 
