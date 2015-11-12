@@ -1,7 +1,7 @@
 <?php
 $aksi="modul_admin/mod_kriteria/aksi_kriteria.php";
 switch($_GET[act]){
-  // Tampil Kriteria
+  // Display Criteria
   default:
     echo "<h2>Assessment Criteria Management</h2>
           <input type=button class='btn btn-success' value='Add Criteria' 
@@ -30,7 +30,7 @@ switch($_GET[act]){
 	
     break;
   
-  // Form Tambah Kategori
+  // Form Add Criteria
   case "tambah":
     echo "<h2>Add Criteria</h2>
           <form method=POST action='$aksi?modul=kriteria&act=input'>
@@ -42,7 +42,7 @@ switch($_GET[act]){
           </table></form>";
      break;
   
-  // Form Edit Kategori  
+  // Form Edit Criteria  
   case "edit":
     $edit=mysql_query("SELECT * FROM kriteria WHERE id_kriteria='$_GET[id]'");
     $r=mysql_fetch_array($edit);
