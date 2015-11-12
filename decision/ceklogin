@@ -9,7 +9,7 @@ function anti_injection($data){
 $username = anti_injection($_POST[username]);
 $pass     = anti_injection(md5($_POST[password]));
 
-// pastikan username dan password adalah berupa huruf atau angka.
+// make sure that the username and password used is a combination of letters and/or numbers.
 if (!ctype_alnum($username) OR !ctype_alnum($pass)){
   echo "<div align=center>";
   echo "<p>Login Failed</p><br>";
@@ -20,7 +20,7 @@ $login=mysql_query("SELECT * FROM pengguna WHERE username='$username' AND passwo
 $ketemu=mysql_num_rows($login);
 $r=mysql_fetch_array($login);
 
-// Apabila username dan password ditemukan
+// Function if the username is enlisted in database
 if ($ketemu > 0){
   session_start();
 
@@ -36,6 +36,8 @@ if ($ketemu > 0){
 
   header('location:indexs.php?modul=beranda');
 }
+
+// Function if the username is not enlisted
 else{
   echo "<link href=main.css rel=stylesheet type=text/css>";
   echo "<center>LOGIN FAILED <br><br> 
