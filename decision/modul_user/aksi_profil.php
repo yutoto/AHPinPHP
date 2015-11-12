@@ -5,7 +5,7 @@ include "../config/koneksi.php";
 $modul=$_GET[modul];
 $act=$_GET[act];
 
-// Update Karyawan
+// Update Employee
 if ($modul=='profil' AND $act=='update'){
   if (empty($_POST[password])) {
     mysql_query("UPDATE karyawan SET 
@@ -16,7 +16,7 @@ if ($modul=='profil' AND $act=='update'){
                                   telp         = '$_POST[telp]'  
                            WHERE  nip       = '$_POST[id]'");
   }
-  // Apabila password diubah
+  // If the password has been changed
   else{
     $pass=md5($_POST[password]);
 	mysql_query("UPDATE karyawan SET nip       = '$_POST[nip]',
