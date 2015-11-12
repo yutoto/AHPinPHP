@@ -2,7 +2,7 @@
 include "config/koneksi.php";
 include "config/fungsi_indotgl.php";
 ini_set('display_errors', 1); ini_set('error_reporting', E_ERROR);
-// Bagian Home
+// Home page
 if ($_GET[modul]=='beranda'){
   echo "<h2>Welcome</h2>
           <p>Hi <b>$_SESSION[namauser]</b>, welcome to the ";
@@ -21,63 +21,63 @@ if ($_GET[modul]=='beranda'){
   echo "</p>";
 }
 
-// Bagian User
+// User page
 elseif ($_GET[modul]=='dtakary'){
   include "modul_admin/mod_karyawan/karyawan.php";
 }
 
-// Bagian Modul
+// Modul part
 elseif ($_GET[modul]=='kriteria'){
   include "modul_admin/mod_kriteria/kriteria.php";
 }
 
-// Bagian Bobot Kriteria
+// Weight of Criteria part
 elseif ($_GET[modul]=='bobot'){
   include "modul_admin/mod_bobot/matrik.php";
   mysql_query("DELETE FROM hasil_evaluasi"); 
 }
 
-// Bagian Evaluasi Karyawan
+// Employee Evaluation part
 elseif ($_GET[modul]=='evaluasi'){
   include "modul_admin/mod_evaluasi/evaluasi.php";
 }
 
-// Bagian Laporan Evaluasi Karyawan
+// Employee Evaluation Report part
 elseif ($_GET[modul]=='laporan'){
   include "modul_admin/mod_laporan/laporan.php";
 }
 
-// Bagian Laporan Evaluasi Karyawan Sebelumnya
+// Previous Employee Evaluation Report part
 elseif ($_GET[modul]=='previous_evaluations'){
   include "modul_admin/mod_laporan/previous_evaluations.php";
 }
 
-// Bagian view Evaluasi sesuai nama evaluasi
+// View Evaluation part
 elseif ($_GET[modul]=='view_evaluation'){
   include "modul_admin/mod_laporan/veiw_evaluation.php";
 }
 
-// Bagian Bantuan
+// Help part
 elseif ($_GET[modul]=='bantuan'){
   include "bantuan.php";
 }
 
-// Bagian Tentang
+// About The System part
 elseif ($_GET[modul]=='tentang'){
   include "tentang.php";
 }
 
-// Bagian Hasil User
+// User Result part
 elseif ($_GET[modul]=='hasil'){
   include "modul_admin/mod_laporan/laporan.php";
 }
 
-// Bagian Profil User
+// User Profile part
 elseif ($_GET[modul]=='profil'){
   include "modul_user/profil.php";
 }
 
-// Apabila modul tidak ditemukan
+// If modules can't be found
 else{
   echo "<p><b>MODUL HASN'T BEEN CREATED</b></p>";
 }
