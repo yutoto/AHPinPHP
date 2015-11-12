@@ -19,7 +19,7 @@ if ($hasil){
 	    } else { 
 		    $page = $_GET['hal']; 
 	    }
-	    $jmlperhalaman = 10;  // jumlah record per halaman
+	    $jmlperhalaman = 10;  // sum of record per page
 	    $offset = (($page * $jmlperhalaman) - $jmlperhalaman);
 	    
 	
@@ -34,7 +34,7 @@ if ($hasil){
 		    </tr>";
 	    }
     echo "</table>";
-	// membuat nomor halaman
+	// Create page number
 	$total_record = mysql_result(mysql_query("SELECT COUNT(*) as Num FROM previous_calculation group by eval_code"),0);
 	$total_halaman = ceil($total_record / $jmlperhalaman);
 	echo "<center>Page :<br/>"; 
