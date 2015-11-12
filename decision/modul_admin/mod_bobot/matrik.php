@@ -1,7 +1,7 @@
 <?php
 $aksi="modul_admin/mod_bobot/aksi_matrik.php";
 switch($_GET[act]){
-  // Tampil Matrik Perbandingan Kriteria
+  // Showing PCJM Matrix
   default:
     $queri=mysql_query("SELECT * FROM konsistensi");
 	$cr=mysql_num_rows($queri);
@@ -85,7 +85,7 @@ switch($_GET[act]){
 	}
     break;
   
-  // Matrik Perbandingan
+  // Showing the Comparison Matrix
   case "buatperbandingan":
     echo "<h2>Pairwise Comparation Judgement Matrix (PCJM)</h2>
 	<br>Score used is the Comparation Scale created by Saaty (1-9)
